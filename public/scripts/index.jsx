@@ -68,7 +68,7 @@ const MainComponent = (props) => {
         let result = await requestPost.text();
         console.log(result);
 
-        // document.querySelector('.last_activity_date').value = '';
+        document.querySelector('.last_activity_date').value = '';
         document.querySelector('.registr_date').value = '';
     };
 

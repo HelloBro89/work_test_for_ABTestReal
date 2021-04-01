@@ -1,0 +1,38 @@
+.registr_date {
+    border: 0;
+    outline: none;
+    text-align: center;
+    background-color: rgba(158, 152, 152, 0);
+}
+
+.last_activity_date{
+    border: 0;
+    outline: none;
+    text-align: center;
+    background-color: rgba(158, 152, 152, 0);
+} 
+
+ .table_elements {
+    float: left;
+    width: 33%;
+    height: 30px;
+    outline: 1px solid #000;
+    padding-top: 10px;
+    text-align: center; 
+    
+} 
+
+.div_main_comp {
+    /* outline: 2px solid #000; */
+    width: 450px;
+    height: 200px;
+    margin-left: 10px;
+ 
+}
+
+.calculation_result {
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 242px;
+    text-align: center; 
+}

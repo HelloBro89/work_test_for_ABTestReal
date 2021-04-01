@@ -10,7 +10,6 @@ const MainComponent = (props) => {
     const [count, setCount] = React.useState([]);
     const numId = (count.length === 0) ? 1 : count.length + 1;
 
-
     React.useEffect(async () => {
         let requestGet = await fetch('/getDate');
         let message = await requestGet.json();

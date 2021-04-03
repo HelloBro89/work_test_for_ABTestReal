@@ -3,11 +3,11 @@ const app = express();
 const jsonParser = express.json();
 const Sequelize = require("sequelize");
 const port = process.env.PORT || 8080;
-const portMySQL = process.env.PORT || 3307;
+// const portMySQL = process.env.PORT || 3307;
 
 const sequelize = new Sequelize("testWork", "root", "korolik", {
     dialect: "mysql",
-    port: portMySQL,
+    port: 3307,
     host: "localhost",
     define: {
         timestamps: false

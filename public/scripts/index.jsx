@@ -108,7 +108,7 @@ const MainComponent = () => {
 
             <div>
                 <button className="mains_buttons" onClick={addDate}>save</button>
-                {/* <button className="mains_buttons" onClick={clearDB}>clearDB</button> */}
+                <button className="mains_buttons" onClick={clearDB}>clearDB</button>
                 <button className="mains_buttons" onClick={calculate}>Calculate</button>
 
                 <div style={{ marginTop: "10px", marginLeft: "234px" }}>
@@ -122,10 +122,7 @@ const MainComponent = () => {
                 <input className="speed_work" id="speed_calculate" readOnly="true"></input>
                 <input className="speed_work" id="speed_render" readOnly="true"></input>
             </div>
-
-
         </div >
-
     );
 };
 

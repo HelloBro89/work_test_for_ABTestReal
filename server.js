@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const jsonParser = express.json();
 const Sequelize = require("sequelize");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 const sequelize = new Sequelize("testWork", "root", "korolik", {
     dialect: "mysql",

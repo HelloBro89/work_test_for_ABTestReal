@@ -7,9 +7,9 @@ const portMySQL = process.env.PORT || 3307;
 
 const sequelize = new Sequelize("testWork", "root", "korolik", {
     dialect: "mysql",
-    port: 3307,
-    // port: portMySQL,
-    host: "192.168.0.109",
+    // port: 3307,
+    port: portMySQL,
+    host: "127.0.0.1",
     define: {
         timestamps: false
     }

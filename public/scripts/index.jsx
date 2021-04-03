@@ -22,7 +22,6 @@ const MainComponent = () => {
         // console.log(Date.now() - time1);
         setCount(message);
 
-
     }, []);
 
     const calculate = () => {
@@ -65,6 +64,7 @@ const MainComponent = () => {
             dateLastActivity: dateActivity,
             sumOfDays: (dLA - dR) / 86400000
         };
+
 
         let update = [...count, mess];
         setCount(update);

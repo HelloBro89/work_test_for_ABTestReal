@@ -3,17 +3,24 @@ const app = express();
 const jsonParser = express.json();
 const Sequelize = require("sequelize");
 const port = process.env.PORT || 3000;
-const portMySQL = process.env.PORT || 3307;
 
-const sequelize = new Sequelize("r9gtarcy2dxytuyx", "u3q19qaz42l8e4p8", "ymy8duaz53pfomvc", {
+
+const sequelize = port == 3000 ? new Sequelize("testWork", "root", "korolik", {
     dialect: "mysql",
-    // port: 3307,
-    port: 3306,
-    host: "yvu4xahse0smimsc.chr7pe7iynqr.eu-west-1.rds.amazonaws.com",
+    port: 3307,
+    host: "localhost",
     define: {
         timestamps: false
     }
-});
+}) :
+    new Sequelize("r9gtarcy2dxytuyx", "u3q19qaz42l8e4p8", "ymy8duaz53pfomvc", {
+        dialect: "mysql",
+        port: 3306,
+        host: "yvu4xahse0smimsc.chr7pe7iynqr.eu-west-1.rds.amazonaws.com",
+        define: {
+            timestamps: false
+        }
+    });
 
 const Users = sequelize.define('dateInfo', {
     userId: {

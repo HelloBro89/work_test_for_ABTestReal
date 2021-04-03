@@ -4,7 +4,6 @@ const jsonParser = express.json();
 const Sequelize = require("sequelize");
 const port = process.env.PORT || 3000;
 
-
 const sequelize = port == 3000 ? new Sequelize("testWork", "root", "korolik", {
     dialect: "mysql",
     port: 3307,

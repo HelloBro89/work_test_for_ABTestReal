@@ -1,5 +1,3 @@
-// const { render } = require("react-dom");
-
 const StringInfo = (props) => {
     return <div>
         <div className='table_elements' idUser='user_id' >{props.userId}</div>
@@ -90,9 +88,9 @@ const MainComponent = () => {
     return (
 
         <div className="div_main_comp">
-            <div className='table_elements' style={{ fontWeight: 600 }}>UserID</div>
-            <div className='table_elements' style={{ fontWeight: 600 }}>Date Registration</div>
-            <div className='table_elements' style={{ fontWeight: 600 }}>Date Last Activity</div>
+            <div className='table_elements' style={{ fontWeight: 100 }}>UserID</div>
+            <div className='table_elements' style={{ fontWeight: 100 }}>Date Registration</div>
+            <div className='table_elements' style={{ fontWeight: 100 }}>Date Last Activity</div>
             <div className='table_elements' id='user_id' >{numId}</div>
             <div className='table_elements'><input style={{ width: '140px' }} type="date" className="date_info" id='registr_date' /></div>
             <div className='table_elements'><input style={{ width: '140px' }} type="date" className="date_info" id='last_activity_date' /></div>
@@ -110,7 +108,6 @@ const MainComponent = () => {
                 <button className="mains_buttons" onClick={addDate}>save</button>
                 <button className="mains_buttons" onClick={clearDB}>clearDB</button>
                 <button className="mains_buttons" onClick={calculate}>Calculate</button>
-
                 <div style={{ marginTop: "10px", marginLeft: "234px" }}>
                     <input className='calculations' id="calculation_result" placeholder="result" readOnly="true" />
                     <input className='calculations' id="sting_X_days" placeholder="RR x days" type="number" />

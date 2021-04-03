@@ -5,11 +5,11 @@ const Sequelize = require("sequelize");
 const port = process.env.PORT || 3000;
 const portMySQL = process.env.PORT || 3307;
 
-const sequelize = new Sequelize("testWork", "root", "korolik", {
+const sequelize = new Sequelize("r9gtarcy2dxytuyx", "u3q19qaz42l8e4p8", "ymy8duaz53pfomvc", {
     dialect: "mysql",
     // port: 3307,
-    port: portMySQL,
-    host: "localhost",
+    port: 3306,
+    host: "yvu4xahse0smimsc.chr7pe7iynqr.eu-west-1.rds.amazonaws.com",
     define: {
         timestamps: false
     }

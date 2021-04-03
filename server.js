@@ -9,7 +9,7 @@ const sequelize = new Sequelize("testWork", "root", "korolik", {
     dialect: "mysql",
     // port: 3307,
     port: portMySQL,
-    host: "localhost",
+    host: "192.168.202.1",
     define: {
         timestamps: false
     }

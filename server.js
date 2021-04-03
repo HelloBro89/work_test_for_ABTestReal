@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const jsonParser = express.json();
 const Sequelize = require("sequelize");
+const port = process.env.PORT || 3000;
 
 const sequelize = new Sequelize("testWork", "root", "korolik", {
     dialect: "mysql",
@@ -56,7 +57,7 @@ app.delete('/clearDB', jsonParser, function (req, res) {
 })
 
 sequelize.sync().then(() => {
-    app.listen(3000, function () {
+    app.listen(port, function () {
         console.log("The server is waiting for a connection...");
     });
 }).catch(err => console.log(err));

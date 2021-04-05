@@ -75,7 +75,6 @@ const MainComponent = (props) => {
             sumOfDays: (dLA - dR) / 86400000
         };
 
-
         let update = [mess, ...count];
         setCount(update);
 
@@ -139,7 +138,6 @@ const MainComponent = (props) => {
                 <input className="speed_work" id="speed_render" value="время рендеринга" type="button" onClick={getTime} />
             </div>
             <div style={{ marginTop: "15px" }} >
-
                 {setCheckPoint()}
                 {
                     count.map((el) => {

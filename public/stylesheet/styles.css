@@ -15,7 +15,6 @@
     height: 30px;
     padding-top: 10px;
     text-align: center; 
-    /* outline: 1px solid #000; */
 } 
 
 .div_main_comp {
@@ -27,14 +26,18 @@
 }
 
 .calculations {
+    border: 1px solid black;
+    border-radius: 40px;
     width: 60px;
     margin-left: 10px;
     text-align: center; 
 }
 
 .speed_work{
+    text-align: center;
     margin-left: 10px;
-    width: 100px;
+    width: 130px;
+ 
 }
 
 .mains_buttons {
@@ -45,15 +48,24 @@
     width: 90px;
     height: 40px;
     margin-top: 10px;
-    margin-left: 90px;
+    margin-left: 45px;
     background-color: rgb(74, 157, 255);
     color: white;
 }
-.mains_buttons:active { /* Добавляем псевдокласс :active */
-    width: 87px; /* Уменьшаем ширину */
-    height: 37px; /* Уменьшаем высоту */
+.mains_buttons:active { 
+    width: 87px; 
+    height: 37px; 
     box-shadow: 0 0 hsl(5, 60%, 60%); /* Уменьшаем тень */
     border: 2px solid hsl(5, 40%, 70%); /* Уменьшаем толщину рамки */
     background: linear-gradient(top, hsl(0, 90%, 90%), hsl(0, 100%, 50%) 90%);
     background: -webkit-linear-gradient(top, hsl(0, 90%, 90%), hsl(0, 13%, 13%) 90%); /* Изменяем значения линейного градиента */
+}
+
+.info{
+    margin-top: 10px;
+float: left;
+width: 150px;
+font-size: 12px;
+height: 28px;
+text-align: center;
 }

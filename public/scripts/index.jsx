@@ -12,30 +12,30 @@ const MainComponent = (props) => {
     let checkPoint;
 
     React.useEffect(async () => {
-        let time = Date.now();
+        let time = performance.now();
         let requestGet = await fetch('/getDate');
         let message = await requestGet.json();
-        let time1 = Date.now();
-        let result = time1 - time + " ms";
+        let time1 = performance.now();
+        let result = (time1 - time).toFixed(10) + " ms";
         document.getElementById('speed_req_db').value = result;
-        console.log(`${result} ms - время извлечения информации из БД`)
+        console.log(`${result} - время извлечения информации из БД`)
         message.reverse();
         setCount(message);
     }, []);
 
     const calculate = () => {
-        let time = Date.now();
+        let time = performance.now();
 
         let valRRxDays = Number(document.getElementById('sting_X_days').value);
         let returningUsers = count.filter(el => el.sumOfDays >= valRRxDays);
         let installedUsers = count.filter(el => (Date.now() - new Date(el.dateRegistration)) / 86400000 >= valRRxDays);
         let num = returningUsers.length / installedUsers.length * 100;
 
-        let time1 = Date.now();
+        let time1 = performance.now();
 
         num = isNaN(num) ? 0 : num;
 
-        document.getElementById('speed_calculate').value = time1 - time + " ms";
+        document.getElementById('speed_calculate').value = (time1 - time).toFixed(10) + " ms";
         document.getElementById('calculation_result').value = num.toFixed(2) + "%";
         console.log(`${time1 - time} ms - время расчёта "Rolling Retention X day"`)
     };
@@ -93,12 +93,12 @@ const MainComponent = (props) => {
     };
 
     function setCheckPoint() {
-        checkPoint = Date.now();
+        checkPoint = performance.now();
     };
 
     function setTime() {
-        let currentTime = Date.now();
-        checkPoint = currentTime - checkPoint + " ms";
+        let currentTime = performance.now();
+        checkPoint = (currentTime - checkPoint).toFixed(10) + " ms";
         if (count.length > 0) {
             console.log(`${checkPoint} - время вывода значений из БД на экран`)
         }
@@ -117,7 +117,7 @@ const MainComponent = (props) => {
             <div className='table_elements'><input style={{ width: '140px' }} type="date" className="date_info" id='registr_date' /></div>
             <div className='table_elements'><input style={{ width: '140px' }} type="date" className="date_info" id='last_activity_date' /></div>
 
-            <div >
+            <div>
                 <button className="mains_buttons" onClick={addDate}>save</button>
                 <button className="mains_buttons" onClick={clearDB}>clearDB</button>
                 <button className="mains_buttons" onClick={calculate}>Calculate</button>
